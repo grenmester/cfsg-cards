@@ -198,15 +198,15 @@
   family: $"HS"$
   category: sporadic (Leech lattice)
   order: $2^9 dot 3^2 dot 5^3 dot 7 dot 11$
-  fun_fact:
-  icon:
+  fun_fact: Stabilizer of two type 3 vectors with inner product -4 in the Leech lattice. Acts as a rank 3 permutation group on the Higman-Sims graph with 100 points.
+  icon: A 3-3-2 triangle in the Leech lattice $Lambda_24$
 
 - class: McLaughlin Group
   family: $"McL"$
   category: sporadic (Leech lattice)
   order: $2^7 dot 3^6 dot 5^3 dot 7 dot 11$
-  fun_fact:
-  icon:
+  fun_fact: Stabilizer of two type 2 vectors with inner product -1 in the Leech lattice. Acts as a rank 3 permutation group on the McLaughlin graph with 275 points.
+  icon: A 3-2-2 triangle in the Leech lattice $Lambda_24$
 
 - class: Held Group
   family: $"He"$
@@ -240,22 +240,22 @@
   family: $"Co"_1$
   category: sporadic (Leech lattice)
   order: $2^21 dot 3^9 dot 5^4 dot 7^2 dot 11 dot 13 dot 23$
-  fun_fact:
-  icon:
+  fun_fact: Quotient of the automorphism group of the Leech lattice by its center. Has a 24-dimensional representation over $F_2$.
+  icon: The Leech lattice $Lambda_24$
 
 - class: Conway Group
   family: $"Co"_2$
   category: sporadic (Leech lattice)
   order: $2^18 dot 3^6 dot 5^3 dot 7 dot 11 dot 23$
-  fun_fact:
-  icon:
+  fun_fact: Stabilizer of a type 2 vector in the Leech lattice. Has a rank 3 permutation representation acting on 2300 points.
+  icon: A type 2 vector in the Leech lattice $Lambda_24$
 
 - class: Conway Group
   family: $"Co"_3$
   category: sporadic (Leech lattice)
   order: $2^10 dot 3^7 dot 5^3 dot 7 dot 11 dot 23$
-  fun_fact:
-  icon:
+  fun_fact: Stabilizer of a type 3 vector in the Leech lattice. Has a doubly transitive permutation representation acting on 276 points.
+  icon: A type 3 vector in the Leech lattice $Lambda_24$
 
 - class: Fischer Group
   family: $"Fi"_22$

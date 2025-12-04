@@ -1,5 +1,25 @@
 #import "@preview/cetz:0.4.2"
 
+#let leech-lattice = cetz.canvas({
+  import cetz.draw: *
+
+  set-style(radius: 0.5, stroke: (dash: "dotted"))
+
+  let w = calc.sqrt(3) / 2
+
+  circle((-1.5, -w))
+  circle((-0.5, -w))
+  circle((0.5, -w))
+  circle((1.5, -w))
+  circle((-1, 0))
+  circle((0, 0))
+  circle((1, 0))
+  circle((-1.5, w))
+  circle((-0.5, w))
+  circle((0.5, w))
+  circle((1.5, w))
+})
+
 #let diagrams = (
   "$C_p$": cetz.canvas({
     import cetz.draw: *
@@ -556,6 +576,64 @@
         }
       }
     }
+  }),
+  "$\"HS\"$": cetz.canvas({
+    import cetz.draw: *
+
+    content((0, 0), leech-lattice)
+
+    line((0, 0), (1.5, -calc.sqrt(3) / 2), mark: (end: "straight"))
+    content((0.5, -0.85), $sqrt(6)$)
+
+    line((0, 0), (1.5, calc.sqrt(3) / 2), mark: (end: "straight"))
+    content((0.5, 0.75), $sqrt(6)$)
+
+    line(
+      (1.5, -calc.sqrt(3) / 2),
+      (0, 0),
+      (1.5, 0.866),
+      fill: black.transparentize(90%),
+    )
+    content((1.75, 0), $2$)
+  }),
+  "$\"McL\"$": cetz.canvas({
+    import cetz.draw: *
+
+    content((0, 0), leech-lattice)
+
+    line((0, 0), (0.5, -calc.sqrt(3) / 2), mark: (end: "straight"))
+    circle((0, -0.6), radius: 0.2, fill: white, stroke: (paint: white))
+    content((0, -0.6), $2$)
+
+    line((0, 0), (0.5, calc.sqrt(3) / 2), mark: (end: "straight"))
+    circle((0, 0.6), radius: 0.2, fill: white, stroke: (paint: white))
+    content((0, 0.6), $2$)
+
+    line(
+      (0.5, -calc.sqrt(3) / 2),
+      (0, 0),
+      (0.5, 0.866),
+      fill: black.transparentize(90%),
+    )
+    content((0.9, 0), $sqrt(6)$)
+  }),
+  "$\"Co\"_1$": leech-lattice,
+  "$\"Co\"_2$": cetz.canvas({
+    import cetz.draw: *
+
+    content((0, 0), leech-lattice)
+
+    line((0, 0), (0.5, calc.sqrt(3) / 2), mark: (end: "straight"))
+    circle((0, 0.6), radius: 0.2, fill: white, stroke: (paint: white))
+    content((0, 0.6), $2$)
+  }),
+  "$\"Co\"_3$": cetz.canvas({
+    import cetz.draw: *
+
+    content((0, 0), leech-lattice)
+
+    line((0, 0), (1.5, calc.sqrt(3) / 2), mark: (end: "straight"))
+    content((0.55, 0.75), $sqrt(6)$)
   }),
   "default": cetz.canvas({
     import cetz.draw: *
