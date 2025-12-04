@@ -386,6 +386,177 @@
     content((6, -0.6), $4$)
     content((3, 1.3), $sigma$)
   }),
+  "$\"M\"_11$": cetz.canvas({
+    import cetz.draw: *
+
+    hobby((-1, 0), (0, 1), (1.4, 1.4), (1, -1), stroke: yellow)
+    hobby((1, 0), (0, -1), (-1.4, -1.4), (-1, 1), stroke: yellow)
+    line((-1, -1), (1, 1), stroke: yellow)
+
+    hobby((0, -1), (-1, 0), (-1.4, 1.4), (1, 1), stroke: green)
+    hobby((0, 1), (1, 0), (1.4, -1.4), (-1, -1), stroke: green)
+    line((-1, 1), (1, -1), stroke: green)
+
+    for i in range(-1, 2) {
+      line((-1, i), (1, i), stroke: red)
+      line((i, -1), (i, 1), stroke: blue)
+    }
+
+    for i in range(-1, 2) {
+      for j in range(-1, 2) {
+        circle((i, j), radius: 0.1, fill: black)
+      }
+    }
+  }),
+  "$\"M\"_12$": cetz.canvas({
+    import cetz.draw: *
+
+    bezier-through((-2, -2), (-1, 0), (0, 1), stroke: red)
+    hobby((0, 1), (1.4, 1.4), (1, -1), stroke: red)
+    line((-2, -2), (1, 1), stroke: green)
+    bezier-through((-2, -2), (0, -1), (1, 0), stroke: teal)
+    hobby((1, 0), (1.4, 1.4), (-1, 1), stroke: teal)
+
+    line((-1, -1), (-1, 1), stroke: orange)
+    bezier((-1, -1), (0, -2 * calc.sqrt(2)), (-1, -2), stroke: orange)
+    line((0, -2 * calc.sqrt(2)), (0, 1), stroke: olive)
+    line((1, -1), (1, 1), stroke: fuchsia)
+    bezier((1, -1), (0, -2 * calc.sqrt(2)), (1, -2), stroke: fuchsia)
+
+    bezier-through((2, -2), (0, -1), (-1, 0), stroke: maroon)
+    hobby((-1, 0), (-1.4, 1.4), (1, 1), stroke: maroon)
+    line((2, -2), (-1, 1), stroke: aqua)
+    bezier-through((2, -2), (1, 0), (0, 1), stroke: blue)
+    hobby((0, 1), (-1.4, 1.4), (-1, -1), stroke: blue)
+
+    line((1, -1), (-1, -1), stroke: lime)
+    bezier((1, -1), (2 * calc.sqrt(2), 0), (2, -1), stroke: lime)
+    line((2 * calc.sqrt(2), 0), (-1, 0), stroke: yellow)
+    line((1, 1), (-1, 1), stroke: purple)
+    bezier((1, 1), (2 * calc.sqrt(2), 0), (2, 1), stroke: purple)
+
+    arc(
+      (-2, -2),
+      radius: 2 * calc.sqrt(2),
+      start: 225deg,
+      delta: 135deg,
+      stroke: gray,
+    )
+
+    for i in range(-1, 2) {
+      for j in range(-1, 2) {
+        circle((i, j), radius: 0.1, fill: black)
+      }
+    }
+
+    circle((-2, -2), radius: 0.1, fill: black)
+    circle((0, -2 * calc.sqrt(2)), radius: 0.1, fill: black)
+    circle((2, -2), radius: 0.1, fill: black)
+    circle((2 * calc.sqrt(2), 0), radius: 0.1, fill: black)
+  }),
+  "$\"M\"_22$": cetz.canvas({
+    import cetz.draw: *
+
+    let offsets = (198deg, 18deg, 198deg, 18deg)
+    let rs = (1, 2.01, 2.43, 3)
+
+    let pt(x, y) = (
+      angle: x * 360deg / 5 + offsets.at(y),
+      radius: rs.at(y),
+    )
+
+    for i in range(5) {
+      arc-through(pt(i, 0), pt(i + 1, 2), pt(i + 2, 0), stroke: gray)
+    }
+
+    circle((0, 0), radius: 2.43, stroke: blue)
+    hobby(
+      pt(1, 2),
+      pt(0, 3),
+      pt(3, 0),
+      pt(4, 0),
+      pt(2, 3),
+      pt(1, 2),
+      stroke: green,
+    )
+    hobby(
+      pt(1, 2),
+      pt(3, 3),
+      pt(2, 1),
+      pt(0, 1),
+      pt(4, 3),
+      pt(1, 2),
+      stroke: red,
+    )
+
+    for i in range(5) {
+      line(pt(i, 2), pt(i, 3))
+      line(pt(i, 3), pt(i + 1, 3), stroke: (dash: "dotted"))
+      circle(pt(i, 0), radius: 0.1, fill: black)
+      circle(pt(i, 1), radius: 0.1, fill: black)
+      circle(pt(i, 2), radius: 0.1, fill: black)
+      circle(pt(i, 3), radius: 0.1, fill: black)
+    }
+
+    circle((0, 0), radius: 0.1, fill: black)
+  }),
+  "$\"M\"_23$": cetz.canvas({
+    import cetz.draw: *
+
+    let offsets = (198deg, 198deg, 18deg)
+    let rs = (1, 2.43, 3)
+
+    let pt(x, y) = (
+      angle: x * 360deg / 5 + offsets.at(y),
+      radius: rs.at(y),
+    )
+
+    for i in range(5) {
+      arc-through(pt(i, 0), pt(i + 1, 1), pt(i + 2, 0), stroke: gray)
+    }
+
+    hobby(pt(0, 1), pt(1, 2), pt(2, 1), omega: 0.6, stroke: red)
+    hobby(pt(0, 2), pt(1, 0), pt(2, 2), stroke: green)
+    hobby(pt(3, 0), pt(1, 2), pt(4, 0), stroke: yellow)
+    hobby(pt(3, 1), pt(1, 0), pt(4, 1), omega: 0.6, stroke: blue)
+
+    for i in range(5) {
+      line(pt(i, 1), pt(i, 2))
+      line(pt(i, 2), pt(i + 1, 2))
+      circle(pt(i, 0), radius: 0.1, fill: black)
+      circle(pt(i, 1), radius: 0.1, fill: black)
+      circle(pt(i, 2), radius: 0.1, fill: black)
+    }
+  }),
+  "$\"M\"_24$": cetz.canvas({
+    import cetz.draw: *
+
+    let matrix = (
+      (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1),
+      (0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0),
+      (0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1),
+      (0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0),
+      (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1),
+      (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0),
+      (0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1),
+      (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0),
+      (0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 1),
+      (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0),
+      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1),
+      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1),
+    )
+
+    for (i, row) in matrix.enumerate() {
+      for (j, val) in row.enumerate() {
+        if val == 0 {
+          circle((j / 3, -i / 3), radius: 0.1, stroke: gray)
+        }
+        if val == 1 {
+          circle((j / 3, -i / 3), radius: 0.1, fill: black)
+        }
+      }
+    }
+  }),
   "default": cetz.canvas({
     import cetz.draw: *
 
