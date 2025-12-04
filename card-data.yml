@@ -11,3 +11,304 @@
   order: $n! / 2$
   fun_fact: The group of even permutations of a finite set. Half the size of the corresponding symmetric group $S_n$.
   icon:
+
+- class: Chevalley Group
+  family: $A_n (q)$
+  category: Lie (classical)
+  order: $ q^(1/2n(n+1)) / ((n+1, q-1)) product_(i=1)^n (q^(i+1)-1) $
+  fun_fact:
+  icon:
+
+- class: Steinberg Group
+  family: $attach(,t:2)A_n (q^2), n>1$
+  category: Lie (classical)
+  order: $ q^(1/2n(n+1)) / ((n+1,q+1)) product_(i=1)^n (q^(i+1) - (-1)^(i+1)) $
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $C_n (q), n>2$
+  category: Lie (classical)
+  order: $ q^(n^2) / ((2,q-1)) product_(i=1)^n (q^(2i) - 1) $
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $B_n (q), n>1$
+  category: Lie (classical)
+  order: $ q^(n^2) / ((2,q-1)) product_(i=1)^n (q^(2i) - 1) $
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $D_n (q), n>3$
+  category: Lie (classical)
+  order: $ (q^(n(n-1))(q^n - 1)) / ((4,q^n-1)) product_(i=1)^(n-1) (q^(2i) - 1) $
+  fun_fact:
+  icon:
+
+- class: Steinberg Group
+  family: $attach(,t:2)D_n (q^2), n>3$
+  category: Lie (classical)
+  order: $ (q^(n(n-1))(q^n + 1)) / ((4,q^n+1)) product_(i=1)^(n-1) (q^(2i) - 1) $
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $G_2(q)$
+  category: Lie (exceptional)
+  order: "$ q^6 product_(i in {2,6})(q^i-1) $"
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $F_4(q)$
+  category: Lie (exceptional)
+  order: "$ q^24 product_(i in {2,6,8,12})(q^i-1) $"
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $E_6(q)$
+  category: Lie (exceptional)
+  order: "$ q^36 / ((3,q-1)) product_(i in {2,5,6,8,9,12})(q^i-1) $"
+  fun_fact:
+  icon:
+
+- class: Steinberg Group
+  family: $attach(,t:2)E_6(q^2)$
+  category: Lie (exceptional)
+  order: "$ q^36 / ((3,q+1)) product_(i in {2,5,6,8,9,12})(q^i-(-1)^i) $"
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $E_7(q)$
+  category: Lie (exceptional)
+  order: "$ q^63 / ((2,q-1)) product_(i in {2,6,8,10,12,14,18})(q^i-1) $"
+  fun_fact:
+  icon:
+
+- class: Chevalley Group
+  family: $E_8(q)$
+  category: Lie (exceptional)
+  order: "$ q^120 product_(i in {2,8,12,14,18,20,24,30})(q^i-1) $"
+  fun_fact:
+  icon:
+
+- class: Steinberg Group
+  family: $attach(,t:3)D_4(q^3)$
+  category: Lie (exceptional)
+  order: $ q^12 (q^8+q^4+1)(q^6-1)(q^2-1) $
+  fun_fact:
+  icon:
+
+- class: Suzuki Group
+  family: $attach(,t:2)B_2(q), q=2^(2n+1)$
+  category: Lie (exceptional)
+  order: $ q^2 (q^2+1)(q-1) $
+  fun_fact:
+  icon:
+
+- class: Ree Group
+  family: $attach(,t:2)G_2(q), q=3^(2n+1)$
+  category: Lie (exceptional)
+  order: $ q^3 (q^3+1)(q-1) $
+  fun_fact:
+  icon:
+
+- class: Ree Group
+  family: $attach(,t:2)F_4(q), q=2^(2n+1)$
+  category: Lie (exceptional)
+  order: $ q^12 (q^6+1)(q^4-1)(q^3+1)(q-1) $
+  fun_fact:
+  icon:
+
+- class: Tits Group
+  family: $attach(,t:2)F_4(2)'$
+  category: Lie (exceptional)
+  order: $2^12/2 (2^6+1)(2^4-1)(2^3+1)(2-1)$
+  fun_fact:
+  icon:
+
+- class: Mathieu Group
+  family: $"M"_11$
+  category: sporadic (Mathieu)
+  order: $2^4 dot 3^2 dot 5 dot 11$
+  fun_fact:
+  icon:
+
+- class: Mathieu Group
+  family: $"M"_12$
+  category: sporadic (Mathieu)
+  order: $2^6 dot 3^3 dot 5 dot 11$
+  fun_fact:
+  icon:
+
+- class: Mathieu Group
+  family: $"M"_22$
+  category: sporadic (Mathieu)
+  order: $2^7 dot 3^2 dot 5 dot 7 dot 11$
+  fun_fact:
+  icon:
+
+- class: Mathieu Group
+  family: $"M"_23$
+  category: sporadic (Mathieu)
+  order: $2^7 dot 3^2 dot 5 dot 7 dot 11 dot 23$
+  fun_fact:
+  icon:
+
+- class: Mathieu Group
+  family: $"M"_24$
+  category: sporadic (Mathieu)
+  order: $2^10 dot 3^3 dot 5 dot 7 dot 11 dot 23$
+  fun_fact:
+  icon:
+
+- class: Janko Group
+  family: $"J"_1$
+  category: sporadic (pariah)
+  order: $2^3 dot 3 dot 5 dot 7 dot 11 dot 19$
+  fun_fact:
+  icon:
+
+- class: Janko Group
+  family: $"J"_2$
+  category: sporadic (Leech lattice)
+  order: $2^7 dot 3^3 dot 5^2 dot 7$
+  fun_fact:
+  icon:
+
+- class: Janko Group
+  family: $"J"_3$
+  category: sporadic (pariah)
+  order: $2^7 dot 3^5 dot 5 dot 17 dot 19$
+  fun_fact:
+  icon:
+
+- class: Janko Group
+  family: $"J"_4$
+  category: sporadic (pariah)
+  order: $2^21 dot 3^3 dot 5 dot 7 dot 11^3 dot 23 dot 29 dot 31 dot 37 dot 43$
+  fun_fact:
+  icon:
+
+- class: Higman-Sims Group
+  family: $"HS"$
+  category: sporadic (Leech lattice)
+  order: $2^9 dot 3^2 dot 5^3 dot 7 dot 11$
+  fun_fact:
+  icon:
+
+- class: McLaughlin Group
+  family: $"McL"$
+  category: sporadic (Leech lattice)
+  order: $2^7 dot 3^6 dot 5^3 dot 7 dot 11$
+  fun_fact:
+  icon:
+
+- class: Held Group
+  family: $"He"$
+  category: sporadic (Monstrous)
+  order: $2^10 dot 3^3 dot 5^2 dot 7^3 dot 17$
+  fun_fact:
+  icon:
+
+- class: Rudvalis Group
+  family: $"Ru"$
+  category: sporadic (pariah)
+  order: $2^14 dot 3^3 dot 5^3 dot 7 dot 13 dot 29$
+  fun_fact:
+  icon:
+
+- class: Suzuki Group
+  family: $"Suz"$
+  category: sporadic (Leech lattice)
+  order: $2^13 dot 3^7 dot 5^2 dot 7 dot 11 dot 13$
+  fun_fact:
+  icon:
+
+- class: O'Nan Group
+  family: $"O'N"$
+  category: sporadic (pariah)
+  order: $2^9 dot 3^4 dot 5 dot 7^3 dot 11 dot 19 dot 31$
+  fun_fact:
+  icon:
+
+- class: Conway Group
+  family: $"Co"_1$
+  category: sporadic (Leech lattice)
+  order: $2^21 dot 3^9 dot 5^4 dot 7^2 dot 11 dot 13 dot 23$
+  fun_fact:
+  icon:
+
+- class: Conway Group
+  family: $"Co"_2$
+  category: sporadic (Leech lattice)
+  order: $2^18 dot 3^6 dot 5^3 dot 7 dot 11 dot 23$
+  fun_fact:
+  icon:
+
+- class: Conway Group
+  family: $"Co"_3$
+  category: sporadic (Leech lattice)
+  order: $2^10 dot 3^7 dot 5^3 dot 7 dot 11 dot 23$
+  fun_fact:
+  icon:
+
+- class: Fischer Group
+  family: $"Fi"_22$
+  category: sporadic (Fischer)
+  order: $2^17 dot 3^9 dot 5^2 dot 7 dot 11 dot 13$
+  fun_fact:
+  icon:
+
+- class: Fischer Group
+  family: $"Fi"_23$
+  category: sporadic (Fischer)
+  order: $2^18 dot 3^13 dot 5^2 dot 7 dot 11 dot 13 dot 17 dot 23$
+  fun_fact:
+  icon:
+
+- class: Fischer Group
+  family: $"Fi"'_24$
+  category: sporadic (Fischer)
+  order: $2^21 dot 3^16 dot 5^2 dot 7^3 dot 11 dot 13 dot 17 dot 23 dot 29$
+  fun_fact:
+  icon:
+
+- class: Harada-Norton Group
+  family: $"HN"$
+  category: sporadic (Monstrous)
+  order: $2^14 dot 3^6 dot 5^6 dot 7 dot 11 dot 19$
+  fun_fact:
+  icon:
+
+- class: Lyons Group
+  family: $"Ly"$
+  category: sporadic (pariah)
+  order: $2^8 dot 3^7 dot 5^6 dot 7 dot 11 dot 31 dot 37 dot 67$
+  fun_fact:
+  icon:
+
+- class: Thompson Group
+  family: $"Th"$
+  category: sporadic (Monstrous)
+  order: $2^15 dot 3^10 dot 5^3 dot 7^2 dot 13 dot 19 dot 31$
+  fun_fact:
+  icon:
+
+- class: Baby Monster Group
+  family: $BB$
+  category: sporadic (Monstrous)
+  order: $2^41 dot 3^13 dot 5^6 dot 7^2 dot 11 dot 13 dot 17 dot 19 dot 23 dot 31 dot 47$
+  fun_fact:
+  icon:
+
+- class: Monster Group
+  family: $MM$
+  category: sporadic (Monstrous)
+  order: $2^46 dot 3^20 dot 5^9 dot 7^6 dot 11^2 dot 13^3 dot 17 dot 19 dot 23 dot 29 dot 31 dot 41 dot 47 dot 59 dot 71$
+  fun_fact:
+  icon:
