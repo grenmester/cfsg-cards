@@ -135,36 +135,36 @@
   family: $"M"_11$
   category: sporadic (Mathieu)
   order: $2^4 dot 3^2 dot 5 dot 11$
-  fun_fact:
-  icon:
+  fun_fact: Automorphism group of the Steiner system $S(4,5,11)$ and perfect ternary Golay code $G_11$. Acts as a sharply 4-transitive permutation group on 11 points and as the point stabilizer of $"M"_12$.
+  icon: The affine plane $AG(2,3)$
 
 - class: Mathieu Group
   family: $"M"_12$
   category: sporadic (Mathieu)
   order: $2^6 dot 3^3 dot 5 dot 11$
-  fun_fact:
-  icon:
+  fun_fact: Automorphism group of the Steiner system $S(5,6,12)$. The double cover is the automorphism group of the extended ternary Golay code $G_12$. Acts as a sharply 5-transitive permutation group on 12 points.
+  icon: The projective plane $PG(2,3)$
 
 - class: Mathieu Group
   family: $"M"_22$
   category: sporadic (Mathieu)
   order: $2^7 dot 3^2 dot 5 dot 7 dot 11$
-  fun_fact:
-  icon:
+  fun_fact: Automorphism group of the Steiner system $S(3,6,22)$. Acts as a 3-transitive permutation group on 22 points and as the point stabilizer of $"M"_23$.
+  icon: The projective plane $PG(2,4)$
 
 - class: Mathieu Group
   family: $"M"_23$
   category: sporadic (Mathieu)
   order: $2^7 dot 3^2 dot 5 dot 7 dot 11 dot 23$
-  fun_fact:
-  icon:
+  fun_fact: Automorphism group of the Steiner system $S(4,7,23)$ and perfect binary Golay code $G_23$. Acts as a 4-transitive permutation group on 23 points and as the point stabilizer of $"M"_24$.
+  icon: The projective space $PG(3,2)$
 
 - class: Mathieu Group
   family: $"M"_24$
   category: sporadic (Mathieu)
   order: $2^10 dot 3^3 dot 5 dot 7 dot 11 dot 23$
-  fun_fact:
-  icon:
+  fun_fact: Automorphism group of the Steiner system $S(5,8,24)$ and extended binary Golay code $G_24$. Acts as a 5-transitive permutation group on 24 points.
+  icon: The generators of the extended binary Golay code $G_24$
 
 - class: Janko Group
   family: $"J"_1$

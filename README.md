@@ -13,6 +13,7 @@ or one of 26 specific groups called the "sporadic groups".
 - [Wilson - The Finite Simple Groups](https://link.springer.com/book/10.1007/978-1-84800-988-2)
 - [List of Finite Simple Groups](https://www.wikipedia.com/en/articles/List_of_finite_simple_groups)
 - [Mathieu Groups M_11 & M_12 - Steiner System Construction](https://warwick.ac.uk/fac/sci/maths/people/staff/holmes/final_project.pdf)
+- [20 The Golay codes](https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0924650908705452)
 - [Janko’s Sporadic Simple Groups: a bit of history](https://carmamaths.org/meetings/mathsandcomputation/pdfs/mathscomp2015-taylor.pdf)
 - [Dynkin Diagram](https://mathworld.wolfram.com/DynkinDiagram.html)
   - Lie group visualizations
