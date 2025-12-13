@@ -219,22 +219,22 @@
   family: $"Ru"$
   category: sporadic (pariah)
   order: $2^14 dot 3^3 dot 5^3 dot 7 dot 13 dot 29$
-  fun_fact:
-  icon:
+  fun_fact: Has a rank 3 permutation representation acting on 4060 points. The double cover acts on a 28-dimensional lattice over the Gaussian integers.
+  icon: The Gaussian integers $ZZ[i]$
 
 - class: Suzuki Group
   family: $"Suz"$
   category: sporadic (Leech lattice)
   order: $2^13 dot 3^7 dot 5^2 dot 7 dot 11 dot 13$
-  fun_fact:
-  icon:
+  fun_fact: The 6-fold cover acts on the 12-dimensional lattice over the Eisenstein integers, called the complex Leech lattice. It is not related to the Suzuki groups of Lie type.
+  icon: The Eisenstein integers $ZZ[omega]$
 
 - class: O'Nan Group
   family: $"O'N"$
   category: sporadic (pariah)
   order: $2^9 dot 3^4 dot 5 dot 7^3 dot 11 dot 19 dot 31$
-  fun_fact:
-  icon:
+  fun_fact: The triple cover has two 45-dimensional representations over $F_7$. Related to the O'Nan moonshine, which links to special classes of weight 3/2 mock modular forms.
+  icon: The elliptic curve $E_15$ given by $y^2+xy+y=x^3-x^2-10x-10$
 
 - class: Conway Group
   family: $"Co"_1$

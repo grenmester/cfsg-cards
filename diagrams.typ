@@ -617,6 +617,149 @@
     )
     content((0.9, 0), $sqrt(6)$)
   }),
+  "$\"Ru\"$": cetz.canvas({
+    import cetz.draw: *
+    import cetz-plot: *
+
+    set-style(
+      axes: (
+        grid: (stroke: (dash: "dotted", paint: gray)),
+        overshoot: 0,
+        padding: 0.25,
+        shared-zero: false,
+        x: (mark: (start: ">", end: ">", fill: black)),
+        y: (mark: (start: ">", end: ">", fill: black)),
+      ),
+    )
+
+    plot.plot(
+      axis-style: "school-book",
+      size: (7, 5),
+      x-format: none,
+      x-grid: true,
+      x-label: "Re",
+      x-max: 3.5,
+      x-min: -3.5,
+      x-tick-step: 1,
+      y-format: none,
+      y-grid: true,
+      y-label: "Im",
+      y-max: 2.5,
+      y-min: -2.5,
+      y-tick-step: 1,
+      {
+        plot.add(domain: (0, 0), x => 0)
+        plot.annotate(line((0, 0), (3, 2), mark: (end: "straight")))
+        plot.annotate(content((2.6, 2.3), box(
+          $a + b i in ZZ[i]$,
+          inset: 0.25em,
+          fill: white,
+        )))
+      },
+    )
+  }),
+  "$\"Suz\"$": cetz.canvas({
+    import cetz.draw: *
+    import cetz-plot: *
+
+    set-style(
+      axes: (
+        overshoot: 0,
+        padding: 0.25,
+        shared-zero: false,
+        x: (mark: (start: ">", end: ">", fill: black)),
+        y: (mark: (start: ">", end: ">", fill: black)),
+      ),
+    )
+
+    let w = calc.sqrt(3) / 2
+
+    let plot-style = (
+      axis-style: "school-book",
+      size: (7, 5),
+      x-format: none,
+      x-label: "Re",
+      x-max: 3.5,
+      x-min: -3.5,
+      x-tick-step: 1,
+      y-format: none,
+      y-label: "Im",
+      y-max: 2.5,
+      y-min: -2.5,
+      y-tick-step: w,
+    )
+
+    plot.plot(
+      ..plot-style,
+      {
+        plot.add(domain: (0, 0), x => 0)
+        for i in range(-4, 5) {
+          plot.add(
+            domain: (-3.5, 3.5),
+            x => -2 * w * (x - i),
+            style: (stroke: (dash: "dotted", paint: gray)),
+          )
+          plot.add(
+            domain: (-3.5, 3.5),
+            x => 2 * w * (x - i),
+            style: (stroke: (dash: "dotted", paint: gray)),
+          )
+          plot.add(
+            domain: (-3.5, 3.5),
+            x => i * w,
+            style: (stroke: (dash: "dotted", paint: gray)),
+          )
+        }
+        plot.annotate(line((0, 0), (2, 2 * w), mark: (end: "straight")))
+        plot.annotate(content((2.5, 2), box(
+          $a + b omega in ZZ[omega]$,
+          inset: 0.25em,
+          fill: white,
+        )))
+      },
+    )
+    plot.plot(..plot-style, plot.add(domain: (0, 0), x => 0))
+  }),
+  "$\"O'N\"$": cetz.canvas({
+    import cetz.draw: *
+    import cetz-plot: *
+
+    set-style(axes: (
+      grid: (stroke: (dash: "dotted", paint: gray)),
+      x: (mark: (end: ">", fill: black)),
+      y: (mark: (end: ">", fill: black)),
+    ))
+
+    let f-lower(x) = (
+      (-x - 1 - calc.sqrt(4 * x * x * x + 5 * x * x - 38 * x - 39)) / 2
+    )
+    let f-upper(x) = (
+      (-x - 1 + calc.sqrt(4 * x * x * x + 5 * x * x - 38 * x - 39)) / 2
+    )
+
+    plot.plot(
+      axis-style: "left",
+      size: (5, 5),
+      x-grid: true,
+      x-max: 5.5,
+      x-min: -4,
+      x-tick-step: 2,
+      y-grid: true,
+      y-tick-step: 4,
+      {
+        plot.add(domain: (-3.25, -1), f-lower, samples: 200, style: (
+          stroke: black,
+        ))
+        plot.add(domain: (3, 3.1), f-lower, style: (stroke: black))
+        plot.add(domain: (3.1, 5), f-lower, style: (stroke: black))
+        plot.add(domain: (-3.25, -1), f-upper, samples: 200, style: (
+          stroke: black,
+        ))
+        plot.add(domain: (3, 3.1), f-upper, style: (stroke: black))
+        plot.add(domain: (3.1, 5), f-upper, style: (stroke: black))
+      },
+    )
+  }),
   "$\"Co\"_1$": leech-lattice,
   "$\"Co\"_2$": cetz.canvas({
     import cetz.draw: *
