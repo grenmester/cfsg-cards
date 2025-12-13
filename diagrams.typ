@@ -1,4 +1,5 @@
 #import "@preview/cetz:0.4.2"
+#import "@preview/cetz-plot:0.1.3"
 
 #let leech-lattice = cetz.canvas({
   import cetz.draw: *
@@ -777,6 +778,107 @@
 
     line((0, 0), (1.5, calc.sqrt(3) / 2), mark: (end: "straight"))
     content((0.55, 0.75), $sqrt(6)$)
+  }),
+  "$MM$": cetz.canvas({
+    import cetz.draw: *
+    import cetz-plot: *
+
+    set-style(
+      axes: (
+        overshoot: 0,
+        padding: 0.25,
+        shared-zero: false,
+        x: (mark: (start: ">", end: ">", fill: black)),
+        y: (mark: (end: ">", fill: black)),
+      ),
+    )
+
+    let plot-style = (
+      axis-style: "school-book",
+      size: (7, 4),
+      x-format: none,
+      x-max: 2.1,
+      x-min: -2.1,
+      x-tick-step: 1,
+      y-format: none,
+      y-max: 2.5,
+      y-min: 0,
+      y-tick-step: 1,
+    )
+
+    plot.plot(..plot-style, plot.add(domain: (0, 0), x => 0))
+
+    set-style(stroke: 0.5pt)
+
+    plot.plot(
+      ..plot-style,
+      {
+        plot.add(domain: (0, 0), x => 0)
+
+        plot.annotate(line((-1.5, 0), (-1.5, 2.5)))
+        plot.annotate(line((-0.5, 0), (-0.5, 2.5)))
+        plot.annotate(line((0.5, 0), (0.5, 2.5)))
+        plot.annotate(line((1.5, 0), (1.5, 2.5)))
+
+        plot.annotate(arc((-1, 0), start: 0deg, stop: 90deg, radius: 1))
+        for i in range(3) {
+          plot.annotate(arc((i, 0), start: 0deg, stop: 180deg, radius: 1))
+        }
+        plot.annotate(arc((2, 1), start: 90deg, stop: 180deg, radius: 1))
+
+        for i in range(-2, 2) {
+          for r in range(3, 11, step: 2) {
+            plot.annotate(arc(
+              (i, 0),
+              start: 0deg,
+              stop: 180deg,
+              anchor: "arc-end",
+              radius: 1 / r,
+            ))
+            plot.annotate(arc(
+              (i + 1, 0),
+              start: 0deg,
+              stop: 180deg,
+              radius: 1 / r,
+            ))
+          }
+        }
+
+        for i in range(-2, 2) {
+          for j in range(2, 6) {
+            plot.annotate(arc(
+              (i + 1 / j, 0),
+              start: 0deg,
+              stop: 180deg,
+              radius: 1 / (j * j + 2 * j),
+            ))
+            plot.annotate(arc(
+              (i + 1 - 1 / j, 0),
+              start: 0deg,
+              stop: 180deg,
+              anchor: "arc-end",
+              radius: 1 / (j * j + 2 * j),
+            ))
+          }
+        }
+
+        plot.annotate(
+          merge-path(
+            {
+              line((-0.5, 2.5), (-0.5, calc.sqrt(3) / 2))
+              arc(
+                (-0.5, calc.sqrt(3) / 2),
+                start: 120deg,
+                stop: 60deg,
+                radius: 1,
+              )
+              line((0.5, calc.sqrt(3) / 2), (0.5, 2.5))
+            },
+            fill: black.transparentize(80%),
+          ),
+        )
+      },
+    )
   }),
   "default": cetz.canvas({
     import cetz.draw: *

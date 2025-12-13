@@ -310,5 +310,5 @@
   family: $MM$
   category: sporadic (Monstrous)
   order: $2^46 dot 3^20 dot 5^9 dot 7^6 dot 11^2 dot 13^3 dot 17 dot 19 dot 23 dot 29 dot 31 dot 41 dot 47 dot 59 dot 71$
-  fun_fact:
-  icon:
+  fun_fact: Largest sporadic group and contains 19 other sporadic groups as subquotients. Automorphism group of the 196,884-dimensional Griess algebra. Related to monstrous moonshine, which links to the j function and modular forms.
+  icon: Fundamental domain for the modular group $Gamma="SL"_2(ZZ)$
