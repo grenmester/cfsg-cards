@@ -212,8 +212,8 @@
   family: $"He"$
   category: sporadic (Monstrous)
   order: $2^10 dot 3^3 dot 5^2 dot 7^3 dot 17$
-  fun_fact:
-  icon:
+  fun_fact: Has a rank 5 permutation representation acting on 2058 points and two 51-dimensional representations over $CC$ that are duals of each other. Centralizes an element of order 7 in the Monster group.
+  icon: Cayley graph of the Frobenius group $7:3$
 
 - class: Rudvalis Group
   family: $"Ru"$
@@ -282,8 +282,8 @@
   family: $"HN"$
   category: sporadic (Monstrous)
   order: $2^14 dot 3^6 dot 5^6 dot 7 dot 11 dot 19$
-  fun_fact:
-  icon:
+  fun_fact: Acts on a 133-dimensional algebra over $F_5$ and centralizes an element of order 5 in the Monster group.
+  icon: Cayley graph of the dihedral group $D_10$
 
 - class: Lyons Group
   family: $"Ly"$

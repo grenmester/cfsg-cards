@@ -705,6 +705,49 @@
     )
     content((0.9, 0), $sqrt(6)$)
   }),
+  "$\"He\"$": cetz.canvas({
+    import cetz.draw: *
+
+    let offsets = (90deg, 115deg, 90deg)
+    let rs = (1.1, 2, 2.5)
+
+    let pt(x, y) = (
+      angle: y * 360deg / 7 + offsets.at(calc.rem-euclid(x, 3)),
+      radius: rs.at(calc.rem-euclid(x, 3)),
+    )
+
+    for i in range(3) {
+      for j in range(7) {
+        line(pt(i, j), pt(i + 1, j), stroke: red)
+      }
+    }
+
+    for i in range(3) {
+      for j in range(7) {
+        line(pt(i, j), pt(i, j - i + 3))
+        circle(pt(i, j), radius: 0.05, fill: black)
+      }
+    }
+
+    let arrow-positions = (
+      (35deg, 0.865, 16.5deg, black),
+      (5deg, 1.257, -82.9deg, black),
+      (9deg, 2.257, -86.2deg, black),
+      (6deg, 1.633, 30.9deg, red),
+      (38.6deg, 1.75, 180deg, red),
+      (0deg, 2.162, -63.8deg, red),
+    )
+
+    for (offset, r, rotation, color) in arrow-positions {
+      let pt(x, length) = (angle: x * 360deg / 7 + offset, radius: r - length)
+
+      for i in range(7) {
+        rotate(rotation, origin: pt(i, 0))
+        line(pt(i, 0), pt(i, 0.1), stroke: color, mark: (start: "straight"))
+        rotate(-rotation, origin: pt(i, 0))
+      }
+    }
+  }),
   "$\"Ru\"$": cetz.canvas({
     import cetz.draw: *
     import cetz-plot: *
@@ -865,6 +908,34 @@
 
     line((0, 0), (1.5, calc.sqrt(3) / 2), mark: (end: "straight"))
     content((0.55, 0.75), $sqrt(6)$)
+  }),
+  "$\"HN\"$": cetz.canvas({
+    import cetz.draw: *
+
+    let pt(x, y) = (angle: x * 360deg / 5 + 18deg, radius: y)
+
+    for i in range(5) {
+      line(pt(i, 1), pt(i, 1.75), stroke: red)
+      line(pt(i, 1), pt(i + 1, 1))
+      line(pt(i, 1.75), pt(i + 1, 1.75))
+      circle(pt(i, 1), radius: 0.05, fill: black)
+      circle(pt(i, 1.75), radius: 0.05, fill: black)
+    }
+
+    let arrow-positions = (
+      (66deg, 0.827, 78deg),
+      (48deg, 1.423, -84deg),
+    )
+
+    for (offset, r, rotation) in arrow-positions {
+      let pt(x, length) = (angle: x * 360deg / 5 + offset, radius: r - length)
+
+      for i in range(5) {
+        rotate(rotation, origin: pt(i, 0))
+        line(pt(i, 0), pt(i, 0.1), stroke: black, mark: (start: "straight"))
+        rotate(-rotation, origin: pt(i, 0))
+      }
+    }
   }),
   "$\"Ly\"$": cetz.canvas({
     import cetz.draw: *
