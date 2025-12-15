@@ -30,6 +30,27 @@
       circle((angle: 72deg * i, radius: 2), radius: 0.25, fill: black)
     }
   }),
+  "$A_n, n>4$": cetz.canvas({
+    import cetz.draw: *
+
+    let pt(x) = (angle: x * 360deg / 5 + 90deg, radius: 2)
+
+    for i in range(5) {
+      for j in range(i + 1, 5) {
+        for k in range(j + 1, 5) {
+          line(
+            pt(i),
+            pt(j),
+            pt(k),
+            pt(i),
+            fill: black.transparentize(90%),
+            stroke: 0.25pt,
+          )
+        }
+      }
+      circle(pt(i), radius: 0.05, fill: black)
+    }
+  }),
   "$A_n (q)$": cetz.canvas({
     import cetz.draw: *
 
@@ -844,6 +865,27 @@
 
     line((0, 0), (1.5, calc.sqrt(3) / 2), mark: (end: "straight"))
     content((0.55, 0.75), $sqrt(6)$)
+  }),
+  "$\"Ly\"$": cetz.canvas({
+    import cetz.draw: *
+
+    let pt(x) = (angle: x * 360deg / 11 + 90deg, radius: 2)
+
+    for i in range(11) {
+      for j in range(i + 1, 11) {
+        for k in range(j + 1, 11) {
+          line(
+            pt(i),
+            pt(j),
+            pt(k),
+            pt(i),
+            fill: black.transparentize(99%),
+            stroke: 0.25pt,
+          )
+        }
+      }
+      circle(pt(i), radius: 0.01, fill: black)
+    }
   }),
   "$MM$": cetz.canvas({
     import cetz.draw: *
