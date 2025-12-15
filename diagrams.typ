@@ -578,6 +578,72 @@
       }
     }
   }),
+  "$\"J\"_1$": cetz.canvas({
+    import cetz.draw: *
+
+    let c(angle, radius) = {
+      rotate(angle)
+      circle((0, 0), radius: (3, radius))
+      rotate(-2 * angle)
+      circle((0, 0), radius: (3, radius))
+      rotate(angle)
+    }
+
+    let draw(x, y) = {
+      circle((-x, -y))
+      circle((-x, y))
+      circle((x, -y))
+      circle((x, y))
+    }
+
+    merge-path(
+      {
+        line((0, 1.37), (0, 0), (0.91, 0))
+        bezier((0.91, 0), (0, 1.37), (0.45, 0.75))
+      },
+      fill: black.transparentize(80%),
+      stroke: none,
+    )
+
+    line((-3, 0), (3, 0))
+    line((0, -3), (0, 3))
+    circle((0, 0), radius: 3)
+
+    c(20.905deg, 1.3)
+    c(58.283deg, 0.784)
+    c(58.283deg, 2.261)
+
+    set-style(radius: 0.1, fill: red)
+    draw(0, 2.72)
+    draw(0.91, 0)
+    draw(1.62, 1.62)
+    draw(2.8, 1.07)
+
+    set-style(radius: 0.1, fill: green)
+    draw(0, 3)
+    draw(0.88, 2.3)
+    draw(1.32, 0.82)
+    draw(2.38, 1.47)
+    draw(3, 0)
+
+    set-style(radius: 0.1, fill: blue)
+    draw(0, 1.37)
+    draw(1.57, 2.55)
+    draw(2.41, 0)
+  }),
+  "$\"J\"_2$": cetz.canvas({
+    import cetz.draw: *
+
+    let pt(x) = (angle: x * 360deg / 14, radius: 3)
+
+    for i in range(0, 14, step: 2) {
+      line(pt(i), pt(i + 1))
+      line(pt(i), pt(i + 5))
+      line(pt(i), pt(i + 13))
+      circle(pt(i), radius: 0.1, fill: black)
+      circle(pt(i + 1), radius: 0.1, fill: black)
+    }
+  }),
   "$\"HS\"$": cetz.canvas({
     import cetz.draw: *
 

@@ -170,15 +170,15 @@
   family: $"J"_1$
   category: sporadic (pariah)
   order: $2^3 dot 3 dot 5 dot 7 dot 11 dot 19$
-  fun_fact:
-  icon:
+  fun_fact: The first new sporadic group for about a century after the Mathieu groups. The unique simple group with abelian 2-Sylow subgroups and an involution whose centralizer is isomorphic to $A_5x2$. A subgroup of $G_2(11)$ and contained in the O'Nan group.
+  icon: The fundamental domain of the icosahedral group $I_h=A_5 times 2$
 
 - class: Janko Group
   family: $"J"_2$
   category: sporadic (Leech lattice)
   order: $2^7 dot 3^3 dot 5^2 dot 7$
-  fun_fact:
-  icon:
+  fun_fact: The double cover acts on 3-dimensional quaternionic reflection group, called the icosian Leech lattice. Also acts as a rank 3 permutation group on the Hall-Janko graph with 100 points.
+  icon: The Heawood graph
 
 - class: Janko Group
   family: $"J"_3$

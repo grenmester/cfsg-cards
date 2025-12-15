@@ -15,6 +15,7 @@ or one of 26 specific groups called the "sporadic groups".
 - [Mathieu Groups M_11 & M_12 - Steiner System Construction](https://warwick.ac.uk/fac/sci/maths/people/staff/holmes/final_project.pdf)
 - [20 The Golay codes](https://www.sciencedirect.com/science/chapter/bookseries/abs/pii/S0924650908705452)
 - [Janko’s Sporadic Simple Groups: a bit of history](https://carmamaths.org/meetings/mathsandcomputation/pdfs/mathscomp2015-taylor.pdf)
+- [A new near octagon and the Suzuki tower](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v23i2p35/pdf)
 - [Dynkin Diagram](https://mathworld.wolfram.com/DynkinDiagram.html)
   - Lie group visualizations
 - [Frans Marcelis - Mathematics of physics](https://fgmarcelis.wordpress.com/)
